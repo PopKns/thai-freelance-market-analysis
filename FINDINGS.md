@@ -88,7 +88,7 @@ collect.py ──▶ clean.py ──▶ analyze.py / report.ipynb ──▶ dash
                                                     (คัดกรองความน่าเชื่อถือ)
 ```
 
-**Data engineering ที่อยู่เบื้องหลัง (ส่วนที่หนักสุดของงาน):**
+**Data engineering ที่อยู่เบื้องหลัง:**
 - **Ingestion ทนทาน** — robots-aware denylist, rate-limit, cache แบบ idempotent, resumable,
   ทน failure รายตัว (404/410 + per-record try/except)
 - **Source-aware** — ดึงจาก `__NEXT_DATA__` ของ Next.js SPA แทน parse HTML เปราะๆ

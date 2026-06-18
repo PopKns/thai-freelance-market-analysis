@@ -1,7 +1,7 @@
 # พิมพ์เขียว — Fastwork Market Intelligence
 
 > โปรเจค data ที่ดึงข้อมูลตลาดฟรีแลนซ์ไทยจาก Fastwork มาวิเคราะห์ → ทำ report + dashboard สาธารณะ → ต่อยอดเป็น prototype ML คัดกรองความผิดปกติเบื้องต้น (triage; ส่วน recsys/categorize เป็นแนวทางต่อยอด ยังไม่ได้ทำ)
-> เป้าหมายคู่: **(1)** ของจริงที่คนไทยใช้ประโยชน์ได้ **(2)** flagship portfolio ที่ดึงความสนใจบริษัทเทคไทย (โดยเฉพาะ marketplace อย่าง Fastwork เอง)
+> เป้าหมายคู่: **(1)** ของที่คนไทยใช้ประโยชน์ได้ **(2)** ชิ้นงาน portfolio เพื่อสมัครงานบริษัทเทคไทย (รวมถึง marketplace อย่าง Fastwork)
 
 ---
 
@@ -24,7 +24,7 @@
 
 ## 3. หลักการออกแบบ (Design principles)
 
-- **เคารพ ToS เป็นอันดับแรก** — เช็ค `robots.txt`, rate-limit (1 req / 2-3 วินาที), cache ทุกหน้า, ดึงเฉพาะข้อมูลสาธารณะ, ไม่เก็บ PII (ชื่อจริง/อีเมล/เบอร์), anonymize seller เป็น id hash. นี่คือสัญญาณ professional ที่ employer มอง ไม่ใช่ข้อจำกัด
+- **เคารพ ToS เป็นอันดับแรก** — เช็ค `robots.txt`, rate-limit (1 req / 2-3 วินาที), cache ทุกหน้า, ดึงเฉพาะข้อมูลสาธารณะ, ไม่เก็บ PII (ชื่อจริง/อีเมล/เบอร์), anonymize seller เป็น id hash
 - **Snapshot ไม่ใช่ realtime** — ดึงเป็นชุดข้อมูลรายสัปดาห์ พอสำหรับ analysis ไม่กดดันเซิร์ฟเวอร์เขา
 - **Pipeline แยกชั้นชัด** — collect → clean → analyze → serve แต่ละชั้นรันเดี่ยวได้ (ตามสไตล์ tech-radar)
 - **Reproducible** — ใครก็ clone แล้วรันซ้ำได้ มี `requirements.txt` + README ที่รันตามได้จริง

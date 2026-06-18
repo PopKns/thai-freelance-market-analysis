@@ -34,7 +34,7 @@ Fastwork ──▶ collect.py ──▶ clean.py ──▶ analyze.py / report.i
 
 ## จุดเด่นด้านวิศวกรรมข้อมูล (Data Engineering highlights)
 
-ส่วนที่หนักสุดของโปรเจคคือ **pipeline การเก็บและแปลงข้อมูล** ที่ออกแบบให้ทนทานและทำซ้ำได้จริง:
+ส่วนหลักของโปรเจคคือ **pipeline การเก็บและแปลงข้อมูล** ออกแบบให้ resilient และทำซ้ำได้:
 
 - **Ingestion ที่ทนทาน (`collect.py`)** — robots-aware (parse `Disallow` เป็น denylist เองเพราะ
   Python `robotparser` จัดการ `Allow: /` ผิด + เว็บอยู่หลัง Cloudflare ที่บล็อก default UA),
