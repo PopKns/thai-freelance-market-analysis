@@ -1,0 +1,17 @@
+# data & cache — never commit scraped pages or datasets
+data/
+*.parquet
+*.csv
+
+# secrets & local config
+.env
+config.json
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/

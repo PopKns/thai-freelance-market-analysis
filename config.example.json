@@ -1,0 +1,20 @@
+{
+  "base_url": "https://fastwork.co",
+  "rate_limit_seconds": 3,
+  "cache_dir": "data/cache",
+  "respect_robots": true,
+  "user_agent": "fastwork-market-intel/0.1 (research; contact: your-email)",
+  "sitemaps": {
+    "categories": "https://fastwork.co/sitemap-categories-th.xml",
+    "products": "https://fastwork.co/sitemap-products-th.xml",
+    "searches": "https://fastwork.co/sitemap-searches-th.xml"
+  },
+  "categories": [
+    "design-graphic",
+    "web-programming",
+    "marketing-advertising",
+    "lifestyle",
+    "tutor"
+  ],
+  "max_gigs": 200
+}
