@@ -93,7 +93,7 @@ collect.py ──▶ clean.py ──▶ analyze.py / report.ipynb ──▶ dash
   ทน failure รายตัว (404/410 + per-record try/except)
 - **Source-aware** — ดึงจาก `__NEXT_DATA__` ของ Next.js SPA แทน parse HTML เปราะๆ
 - **ETL** — flatten JSON ซ้อน → anonymize PII (hash) → parquet (columnar) + dedup
-- **Sampling** — seeded random sample กระจายทั่ว 222k URL เพื่อความ representative
-- **Quality gates** — 16 tests (offline, synthetic fixtures) · ruff · GitHub Actions CI
+- **Sampling** — seeded random sample (~1.3% ของ 222k URL) ด้วย seed คงที่ → ทำซ้ำได้
+- **Unit tests + CI** — 16 tests (offline, synthetic fixtures — เทสต์ตรรกะโค้ด) · ruff · GitHub Actions
 
 ใช้เฉพาะข้อมูลสาธารณะแบบ aggregate/anonymized (ดู README หัวข้อ Ethics & Compliance)

@@ -1,6 +1,6 @@
 # พิมพ์เขียว — Fastwork Market Intelligence
 
-> โปรเจค data ที่ดึงข้อมูลตลาดฟรีแลนซ์ไทยจาก Fastwork มาวิเคราะห์ → ทำ report + dashboard สาธารณะ → ต่อยอดเป็น prototype ML (fraud / recommendation)
+> โปรเจค data ที่ดึงข้อมูลตลาดฟรีแลนซ์ไทยจาก Fastwork มาวิเคราะห์ → ทำ report + dashboard สาธารณะ → ต่อยอดเป็น prototype ML คัดกรองความผิดปกติเบื้องต้น (triage; ส่วน recsys/categorize เป็นแนวทางต่อยอด ยังไม่ได้ทำ)
 > เป้าหมายคู่: **(1)** ของจริงที่คนไทยใช้ประโยชน์ได้ **(2)** flagship portfolio ที่ดึงความสนใจบริษัทเทคไทย (โดยเฉพาะ marketplace อย่าง Fastwork เอง)
 
 ---
@@ -20,7 +20,7 @@
 |---|---|---|
 | **เล่นเอง / นักวิเคราะห์** | dataset ตลาดฟรีแลนซ์ไทย + report เชิงลึก | `data/`, report notebook |
 | **Retail / คนนอก** | pricing advisor, demand dashboard, fair-price checker | dashboard สาธารณะ |
-| **คนภายใน (Fastwork-like)** | prototype fraud detection / recsys / auto-categorize | `src/ml/` notebooks |
+| **คนภายใน (Fastwork-like)** | prototype คัดกรองความผิดปกติเบื้องต้น (triage) — recsys/auto-categorize = แผนต่อยอด | `src/ml/` notebooks |
 
 ## 3. หลักการออกแบบ (Design principles)
 
@@ -51,8 +51,8 @@
                           │                                       │
                    ┌──────▼───────┐                       ┌───────▼────────┐
                    │ analyze.py   │  charts + stats       │ ml/ (phase 3)  │
-                   │ report.ipynb │──────────────────────▶│ fraud / recsys │
-                   └──────┬───────┘                       │ categorize     │
+                   │ report.ipynb │──────────────────────▶│ anomaly triage │
+                   └──────┬───────┘                       │ (recsys = แผน) │
                           │ figures + tables              └────────────────┘
                    ┌──────▼───────┐
                    │ dashboard/   │  Streamlit / static HTML (public)
