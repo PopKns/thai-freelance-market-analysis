@@ -1,0 +1,10 @@
+# Development deps: full pipeline (collect/clean/analyze), notebooks, tests, lint.
+# Installs the runtime set too, so `pip install -r requirements-dev.txt` is all you need.
+-r requirements.txt
+
+httpx>=0.27        # collect.py — HTTP client for scraping
+matplotlib>=3.8    # analyze.py — static figures
+notebook>=7.0      # run the notebooks/
+nbconvert>=7.0     # render notebooks to HTML
+pytest>=8.0        # tests/
+ruff>=0.4          # lint

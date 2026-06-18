@@ -19,8 +19,13 @@ from pathlib import Path
 
 import pandas as pd
 
-DATA = Path(__file__).resolve().parent.parent / "data" / "listings.parquet"
-SRC = str(Path(__file__).resolve().parent.parent / "src")
+ROOT = Path(__file__).resolve().parent.parent
+# Prefer the full local dataset for development; fall back to the committed,
+# title-stripped public dataset that ships with the deploy (Streamlit Cloud).
+_FULL = ROOT / "data" / "listings.parquet"
+_PUBLIC = ROOT / "data_public" / "listings_public.parquet"
+DATA = _FULL if _FULL.exists() else _PUBLIC
+SRC = str(ROOT / "src")
 if SRC not in sys.path:  # make `ml.anomaly` importable when run via streamlit
     sys.path.insert(0, SRC)
 

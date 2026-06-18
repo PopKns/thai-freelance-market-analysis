@@ -3,6 +3,11 @@ data/
 *.parquet
 *.csv
 
+# ...except the sanitized, title-stripped public dataset the deployed
+# dashboard reads (built by src/make_public_dataset.py — aggregate-only, no PII)
+!data_public/
+!data_public/listings_public.parquet
+
 # secrets & local config
 .env
 config.json
