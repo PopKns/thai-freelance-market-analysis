@@ -1,0 +1,6 @@
+# Exclude Jupyter notebooks from GitHub's language stats so the repo is
+# reported as Python (its real language) rather than "Jupyter Notebook".
+*.ipynb linguist-vendored
+
+# Treat the committed dataset as data, not code.
+*.parquet linguist-vendored
