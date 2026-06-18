@@ -1,7 +1,6 @@
 # Fastwork Market Intelligence
 
-<!-- แทน <owner> ด้วย GitHub username หลัง push -->
-![CI](https://github.com/<owner>/fastwork-market-intel/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/PopKns/thai-freelance-market-analysis/actions/workflows/ci.yml/badge.svg)
 
 **Data pipeline แบบ end-to-end (production-grade)** ที่เปลี่ยน "ตลาดฟรีแลนซ์ไทย" ให้เป็น insight:
 เก็บ gig สาธารณะจาก Fastwork (resilient + resumable) → ETL ทำความสะอาด + anonymize → parquet →
